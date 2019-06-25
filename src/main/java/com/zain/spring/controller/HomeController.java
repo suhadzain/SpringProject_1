@@ -9,17 +9,27 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.zain.spring.model.User;
+
 @Controller
 public class HomeController {
 
 	@RequestMapping("home")
-	public ModelAndView home(@RequestParam("name") String myName) {
+	public ModelAndView home(User user) {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("name", myName);
+		mv.addObject("user", user);
 		mv.setViewName("home");
-		System.out.println("Hai " + myName);
+//		System.out.println("Hai " + myName);
 		return mv;
 	}
+	
+//	public ModelAndView home(@RequestParam("name") String myName) {
+//		ModelAndView mv = new ModelAndView();
+//		mv.addObject("name", myName);
+//		mv.setViewName("home");
+//		System.out.println("Hai " + myName);
+//		return mv;
+//	}
 
 //	@RequestMapping("home")
 //	public String home(@RequestParam("name") String myName,HttpSession session) {
