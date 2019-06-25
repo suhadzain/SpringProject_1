@@ -6,8 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>Hai, Web page created
+<body>Hai, ${name}
 </body>
 </html>
-
-localhost:8080/home
+ 
