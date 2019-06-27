@@ -15,6 +15,11 @@
 		<input name="tech" type="text"><br>
 		<input type="submit">
 	</form>
+	
+	<form action="getuser">
+		<input name="uid" type="text"><br>  
+		<input type="submit">
+	</form>
 </body>
 </html>
  

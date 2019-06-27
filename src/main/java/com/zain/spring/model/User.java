@@ -40,7 +40,7 @@ public class User {
 		this.name = name;
 		this.tech = tech;
 	}
-
+ 
 	public void show() {
 		System.out.println("Showww");
 //		laptop.details(); 

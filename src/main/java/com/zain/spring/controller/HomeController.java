@@ -15,7 +15,7 @@ import com.zain.spring.model.User;
 
 @Controller
 public class HomeController {
-	
+
 	@Autowired
 	UserRepo repo;
 
@@ -32,6 +32,15 @@ public class HomeController {
 	public String addUser(User user) {
 		repo.save(user);
 		return "home";
+
+	}
+
+	@RequestMapping("/getuser")
+	public ModelAndView getUser(@RequestParam int uid) {
+		ModelAndView mv = new ModelAndView("showUser");
+		User user = repo.findById(uid).orElse(new User());
+		mv.addObject(user); 
+		return mv;
 
 	}
 
