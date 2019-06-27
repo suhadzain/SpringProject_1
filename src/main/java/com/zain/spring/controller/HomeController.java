@@ -39,6 +39,12 @@ public class HomeController {
 	public ModelAndView getUser(@RequestParam int uid) {
 		ModelAndView mv = new ModelAndView("showUser");
 		User user = repo.findById(uid).orElse(new User());
+		
+		User user2 = repo.findByTech("spring");
+		System.out.println(user2.getName());
+		System.out.println(repo.findByUidGreaterThan(0).toString());
+		System.out.println(repo.findByTechSorted("spring"));
+		
 		mv.addObject(user); 
 		return mv;
 
